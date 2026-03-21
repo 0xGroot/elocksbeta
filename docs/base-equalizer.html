@@ -28,8 +28,8 @@
             <a href="https://eliteness.network">eliteness.network</a>
         </div>
         <div class="topnav-chain" onclick="chainSwitcher()">
-        	<img src="https://ftm.guru/icons/ftm.svg"/>
-        	<span>Fantom Opera</span>
+        	<img src="https://ftm.guru/icons/base.svg"/>
+        	<span>Base</span>
         </div>
         <div class="topnav-right">
             <p id="p_cw">
@@ -87,7 +87,7 @@
                     <h2>Create eLOCK</h2>
                     <div class="form-item-container">
                         <label for="cl-lp">1. Choose the Pool</label>
-                        <div class="hint"><a href="https://equalizer.exchange/liquidity" target="_blank">Find a pool on Equalizer?</a></div>
+                        <div class="hint"><a href="https://scale.farm/liquidity" target="_blank">Find a pool on Scale?</a></div>
                         <input required class="in-box" id="cl-lp" placeholder="0x1234..5678" onchange="cl_userbal()">
                     </div>
                     <div class="form-item-container">
@@ -224,24 +224,25 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
     <script src="index.js"></script>
     <script>
-        RPC_URL = "https://rpc.ankr.com/fantom";
-        CHAINID = 250;
-        CHAIN_NAME = "Fantom Opera";
-        CHAIN_GAS = "FTM";
+        RPC_URL = "https://mainnet.base.org";
+        CHAINID = 8453;
+        CHAIN_NAME = "Base";
+        CHAIN_GAS = "ETH";
         DECIMAL = 18;
-        EXPLORE = "https://ftmscan.com/";
+        EXPLORE = "https://basescan.org/";
         EXPLORT = EXPLORE + "tx/";
         EXPLORA = EXPLORE + "address/";
-        TVLGURU = "0x0786c3a78f5133f08c1c70953b8b10376bc6dcad";
+        TVLGURU = "0x7a18D1b46baaBB2D8260D0f8cfBb2292901c2779";
         NATIVE = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
-        NATIVE_NAME = "FTM";
-        NATIVE_LOGO = "https://ftm.guru/icons/ftm.svg";
-        LOCKER_ROOM = "0x2f20A659601d1c161A108E0725FEF31256a907ad";
-        FACTORY = "0xc6366efd0af1d09171fe0ebf32c7943bb310832a";
+        NATIVE_NAME = "ETH";
+        NATIVE_LOGO = "https://ftm.guru/icons/eth.svg";
+        LOCKER_ROOM = "0x0e2d28e2e232224404e3c1697c1e6949f6375079";
+        FACTORY = "0xEd8db60aCc29e14bC867a497D94ca6e3CeB5eC04";
         AGENT = "0x167d87a906da361a10061fe42bbe89451c2ee584";
         PERCENT = 0.01337e18;
-        LOGOS = "https://cdn.jsdelivr.net/gh/unified-defi/equalizer-tokens@latest/fantom/tokens/128x128/";
-        GAUGE_REWARD_0 = "EQUAL";
+        LOGOS = "https://cdn.jsdelivr.net/gh/unified-defi/equalizer-tokens@latest/base/tokens/128x128/";
+        GAUGE_REWARD_0 = "SCALE";
+        ART="0x51D63c5fb1676eE1385A92043078858260D6ab76"
     </script>
 </body>
 </html>

@@ -2,9 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://ftm.guru/icons/lock.svg" />
+    <link rel="icon" type="image/svg+xml" href="https://ftm1337.eliteness.network/icons/lock.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eLOCKS — Yield-Paying Liquidity Lockers</title>
+    <script>
+      (() => {
+        const remap = {
+          "https://ftm.guru/icons/lock.svg": "https://ftm1337.eliteness.network/icons/lock.svg",
+          "https://ftm.guru/icons/base.svg": "https://ftm1337.eliteness.network/icons/base.svg"
+        };
+        const fixImage = (img) => {
+          if (!(img instanceof HTMLImageElement)) return;
+          const mapped = remap[img.src];
+          if (mapped && img.src !== mapped) img.src = mapped;
+        };
+        const scan = (root = document) => root.querySelectorAll?.("img").forEach(fixImage);
+        new MutationObserver((mutations) => {
+          for (const mutation of mutations) {
+            if (mutation.type === "attributes") {
+              fixImage(mutation.target);
+              continue;
+            }
+            for (const node of mutation.addedNodes) {
+              if (node instanceof HTMLImageElement) fixImage(node);
+              else scan(node);
+            }
+          }
+        }).observe(document.documentElement, {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ["src"]
+        });
+        window.addEventListener("error", (event) => fixImage(event.target), true);
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", () => scan());
+        } else {
+          scan();
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-tdreCyXj.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/utils-DUS54ir-.js">
     <link rel="stylesheet" crossorigin href="./assets/index-DbnfqQsh.css">
